@@ -1,3 +1,4 @@
+import './App.css';
 import Search from './searchBar';
 
 function App() {
