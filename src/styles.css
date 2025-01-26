@@ -1,0 +1,177 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.search-box {
+  max-width: 800px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.search-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input,
+select,
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+input {
+  flex: 1;
+  background-color: #333;
+  color: #fff;
+}
+
+select {
+  background-color: #333;
+  color: #fff;
+}
+
+button {
+  background-color: #ff4757;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:disabled,
+button.disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.result-item {
+  background-color: #333;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.result-item h3 {
+  margin: 0 0 10px;
+  font-size: 1.25rem;
+}
+
+.result-item p {
+  margin: 0;
+  color: #ccc;
+}
+
+.result-item .question-type {
+  font-weight: bold;
+  color: #ff6b81;
+  margin-bottom: 10px;
+}
+
+.result-item .instruction {
+  font-style: italic;
+  color: #ff6b81;
+  margin-bottom: 10px;
+}
+
+.result-item ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.result-item li {
+  padding: 10px;
+  background-color: #444;
+  margin-bottom: 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.result-item li:hover {
+  background-color: #555;
+}
+
+.result-item li.correct {
+  background-color: #2ecc71;
+}
+
+.result-item li.incorrect {
+  background-color: #e74c3c; 
+}
+
+.anagram-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.block {
+  padding: 10px;
+  background-color: #444;
+  border-radius: 5px;
+  cursor: grab;
+  user-select: none;
+}
+
+.block:active {
+  cursor: grabbing;
+}
+
+.check-answer {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.check-answer:hover {
+  background-color: #0056b3;
+}
+
+.error {
+  color: #ff6b81;
+  text-align: center;
+}
+
+.no-results {
+  text-align: center;
+  color: #ccc;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
