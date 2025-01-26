@@ -1,0 +1,33 @@
+syntax = "proto3";
+
+service QuestSearch {
+  rpc SearchQuestions (SearchRequest) returns (SearchResponse);
+}
+
+message SearchRequest {
+  string query = 1;  // Search query focusing on the title
+  string type = 2;
+}
+
+message SearchResponse {
+  repeated Question questions = 1;
+}
+
+message Question {
+  string title = 1;
+  string type = 2;
+  string content = 3;
+  repeated Block blocks = 4;
+  repeated Option options = 5;
+}
+
+message Block {
+  string text = 1;
+  bool showInOption = 2;
+  bool isAnswer = 3;
+}
+
+message Option {
+  string text = 1;
+  bool isCorrectAnswer = 2;
+}
